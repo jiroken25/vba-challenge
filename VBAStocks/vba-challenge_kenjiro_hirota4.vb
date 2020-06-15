@@ -21,9 +21,7 @@ Dim i As Long
 Dim j As Long
 Dim k As Long
 Dim n As Long
-Dim keyticker As Variant
-Dim keyopen As Variant
-Dim keyclose As Variant
+
 Dim firstdate As Long
 Dim lastdate As Long
 Dim lastrowticker As Long
@@ -83,9 +81,7 @@ Next i
 ' extract data from dictionary for each ticker
 
 For n = 0 To j - 1
-keyticker = "ticker" & n
-keyopen = "open" & n
-keyclose = "close" & n
+
 
 Cells(n + 2, 9).Value = myDic.Item("ticker" & n)
 Cells(n + 2, 10).Value = myDic.Item("close" & n) - myDic.Item("open" & n)
